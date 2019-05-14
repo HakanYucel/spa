@@ -1,0 +1,66 @@
+/** style.css **/
+
+
+body{ padding-bottom:4em; }
+
+  .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 400px;
+      height: 400px;
+    }
+    
+    .swiper-slide img {display: block; width: 400px;}
+
+
+    .btn-group {width:100%;}
+    .dropdown-menu {width: 100%}
+    .dropdown-menu img {    width: 5em;    margin-left: 0.5em;}    
+
+    .dropdown-inner {width: 100%; text-align: left}
+  .album-list li {margin-bottom:0.5em;}    
+
+
+.postModalComments {
+    font-size: 12px;
+    border-left: 1px solid #6c757d;
+    padding-left: 1em;
+    max-height: 27em;
+    overflow: scroll;
+}
+
+
+.dropdown-toggle::after {
+
+	    margin-left: -0.745em;
+}
+  /*
+ *  STYLE 4
+ */
+
+
+#postTable_length {display: none;}
+
+
+.style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.style-4::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.style-4::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+}

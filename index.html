@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>
+      <link rel="stylesheet" href="css/swiper.min.css" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" >
+      <link rel="stylesheet" href="css/style.css" >
+      <title>Hello, world!</title>
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-md navbar-dark  bg-dark" >
+            <a class="navbar-brand" href="#">Simple App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+               <form class="form-inline mt-2 mt-md-0 ml-auto">
+                  <select class="form-control" id="userSelect">
+                  </select>
+               </form>
+            </div>
+         </nav>
+      </header>
+      <div class="container-fluid mt-4">
+         <div class="row">
+            <div class="col-md-4 user-details-box ">
+               <div class="card mb-4">
+                  <div class="card-body">
+                     <div class="row align-items-center justify-content-between mb-4">
+                        <div class="col-9" style="width:100%">User Detail</div>
+                        <div class="col-3"><img src="https://via.placeholder.com/75x75" class="d-block img-fluid ml-auto" width="75"></div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                           <p>Username</p>
+                        </div>
+                        <div class="col-md-8">
+                           <p id="userName">[username]</p>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                           <p>Email</p>
+                        </div>
+                        <div class="col-md-8">
+                           <p id="userMail">[email]</p>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-4">
+                           <p>Address</p>
+                        </div>
+                        <div class="col-md-8">
+                           <p>
+                              <span id="userAddressStreet">[street]</span> 
+                              <span id="userAddressSuite">[suite]</span> 
+                              <span id="userAddressCity">[city]</span>  
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <table class="table table-bordered" id="postTable">
+                  <thead>
+                     <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col" style="width:100%">Title</th>
+                        <th scope="col">Detail</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+            </div>
+            <!-- user-details-box -->
+            <div class="col-md-8">
+               <div class="card mb-4">
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-12 mb-4">
+                           <!-- -->
+                           <div class="btn-group card">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <div class="dropdown-inner d-inline-block">
+                                 </div>
+                                 <span class="glyphicon glyphicon-chevron-down"></span>
+                              </button>
+                              <ul class="dropdown-menu album-list">
+                              </ul>
+                           </div>
+                           <!-- -->
+                        </div>
+                        <div class="col-12">
+                           <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                              </div>
+                              <!-- Add Pagination -->
+                              <div class="swiper-pagination"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <table class="table table-bordered" id="todosTable">
+                  <thead>
+                     <tr>
+                        <th scope="col">Completed</th>
+                        <th scope="col" style="width:100%">Title</th>
+                        <th scope="col">Detail</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+               </table>
+               <div class="mt-2">
+                  <button type="button" class="btn btn-primary add-todo">Add To-do</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- modals -->
+      <!-- post detail modal -->
+      <div class="modal fade" id="postDetailModal" tabindex="-1" role="dialog" aria-labelledby="postDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="postDetailModalLabel">Post Detail</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <div class="col-md-7">
+                     <h3 class="postDetailModalTitle"></h3>
+                     <p class="postModalBody mb-4"></p>
+                  </div>
+                  <div class="col-md-5">
+                     <h4 class="mb-2">Post Comments</h4>
+                     <div class="postModalComments style-4">
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- post detail modal -->
+      <!-- modals -->
+      <script src="js/jquery-3.4.1.min.js" ></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js" ></script>
+      <script src="js/swiper.min.js" ></script>
+      <script src="js/bootbox.min.js" ></script>
+      <script src="js/site.js" ></script>
+   </body>
+</html>

@@ -1,0 +1,57 @@
+/** style.css **/
+
+.owl_wrapper{
+  width: 100%;
+  overflow: hidden;
+}
+.owl_content{padding-left: 12%;}
+.owl_wrapper .owl-item{
+  opacity: 0;
+  transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transition: all .2s;
+  -webkit-transform: all .2s;
+  z-index: 1;
+}
+.owl_wrapper .active{opacity: 0.5;}
+.owl_wrapper .active.middle_beside{
+  transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  opacity: 0.8;
+  margin: 0 -1%;
+  z-index: 2;
+}
+.owl_wrapper .active.middle{
+  transform: scale(1);
+  -ms-transform: scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+.owl_wrapper .active.next_to_mid{margin-left: -1%;}
+.owl_wrapper .active.prev_to_mid{margin-right: -1%;}
+
+
+
+/*===== Navigation =====*/
+.owl_wrapper .prev, .owl_wrapper .next{
+  position: absolute;
+  top: 100px; left: 100px;
+  width: 30px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  background: #777;
+  cursor: pointer;
+  z-index: 5;
+}
+.owl_wrapper .next{left: calc(100% - 100px);}
+.no_select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
